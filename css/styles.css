@@ -1,15 +1,37 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap');
 
-body {
-  font-family: Roboto;
-  color: #757575;
+:root {
+  --main-color: ;
+  --main-font-family: 'Roboto';
+  --font-family-logo: 'Raleway';
+  --primary-color-txt: #212121;
+  --secondary-color-txt: #ffffff;
+  --footer-instagram: url(../images/svg/instagra-footer.svg);
+  --footer-twtter: url(../images/svg/twitter-footer.svg);
+  --footer-facebook: url(../images/svg/facebook-footer.svg);
+  --footer-linkendin: url(../images/svg/linkenid-footer.svg);
+  --incon-contac-phone: url(../images/svg/teléfono\ inteligente.svg);
+  --incon-contac-sobre: url(../images/svg/sobre.svg);
+  --equipo-instagram: url(../images/svg/instagram-equipo.svg);
+  --equipo-twitter: url(../images/svg/twitter-equipo.svg);
+  --equipo-facebook: url(../images/svg/facebook-equipo.svg);
+  --equipo-linkendin: url(../images/svg/likenid-equipo.svg);
+  --custemer-1: url(../images/svg/clinete-logo1.svg);
+  --custemer-2: url(../images/svg/clinete-logo2.svg);
+  --custemer-3: url(../images/svg/clinete-logo3.svg);
+  --custemer-4: url(../images/svg/clinete-logo4.svg);
+  --custemer-5: url(../images/svg/clinete-logo5.svg);
+  --custemer-6: url(../images/svg/clinete-logo6.svg);
+  --galery-animation: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+* {
+  font-family: 'Roboto';
+  color: var(--primary-color-txt);
+}
 a {
   text-decoration: none;
-  color: #212121;
-  font-family: 'Roboto';
 }
 
 ul {
@@ -17,15 +39,15 @@ ul {
 }
 
 h2 {
-  font-family: 'Roboto';
+  font-family: var(--main-font-family);
   font-style: normal;
   font-weight: 700;
-  font-size: 36px;
   line-height: 42px;
-  text-align: center;
   letter-spacing: 0.03em;
   color: #212121;
+  text-align: center;
 }
+
 /* construccion del munu de cabecera*/
 
 #head-section {
@@ -37,7 +59,7 @@ h2 {
 }
 
 #logo {
-  font-family: 'Raleway';
+  font-family: var(--font-family-logo);
   font-style: normal;
   font-weight: 700;
   font-size: 26px;
@@ -51,7 +73,6 @@ h2 {
   display: flex;
   margin-left: auto;
   margin-right: auto;
-  justify-content: center;
   flex-direction: column;
 }
 
@@ -75,12 +96,12 @@ h2 {
 /*iconos antes de enlace de contacto en la cabecera de la web*/
 
 .link::before {
-  content: url(../images/sobremail.jpg);
+  content: var(--incon-contac-sobre);
   margin-right: 10px;
 }
 
 .link-phone::before {
-  content: url(../images/teléfono\ inteligente.svg);
+  content: var(--incon-contac-phone);
   margin-right: 10px;
 }
 
@@ -104,7 +125,7 @@ h2 {
 }
 
 .message-pr > h1 {
-  font-family: 'Roboto';
+  font-family: var(--main-font-family);
   font-style: normal;
   font-weight: 900;
   font-size: 44px;
@@ -116,7 +137,7 @@ h2 {
 }
 
 .message-pr > button {
-  font-family: 'Roboto';
+  font-family: var(--main-font-family);
   font-style: normal;
   font-weight: 700;
   font-size: 16px;
@@ -144,10 +165,9 @@ h2 {
 
 .card-set {
   display: flex;
-  padding: 0;
-  list-style: none;
-  row-gap: 10px;
-  align-items: baseline;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 30px;
 }
 
 .card {
@@ -158,7 +178,7 @@ h2 {
 }
 
 .card h2 {
-  font-family: 'Roboto';
+  font-family: var(--main-font-family);
   font-style: normal;
   font-weight: 700;
   font-size: 14px;
@@ -168,7 +188,7 @@ h2 {
 }
 
 .card p {
-  font-family: 'Roboto';
+  font-family: var(--main-font-family);
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -226,13 +246,11 @@ h2 {
 }
 
 #datos-contac {
-  font-family: 'Roboto';
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
   line-height: 24px;
   letter-spacing: 0.03em;
-  color: #ffffff;
   width: 231px;
   height: 92px;
   padding-left: 10%;
@@ -240,9 +258,13 @@ h2 {
   display: grid;
 }
 
+#datos-contac p {
+  color: var(--secondary-color-txt);
+}
+
 .contac-metod-mail {
   flex-direction: column;
-  font-family: 'Roboto';
+  font-family: var(--main-font-family);
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -252,14 +274,14 @@ h2 {
 
 .contac-metod-phone {
   flex-direction: column;
-  font-family: 'Roboto';
+  font-family: var(--main-font-family);
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
   line-height: 24px;
   color: rgba(255, 255, 255, 0.6);
 }
-
+/* redes sociales botones pie de pagina */
 .socialred-footer {
   display: flex;
   flex-direction: column;
@@ -267,8 +289,76 @@ h2 {
   text-align: center;
 }
 
-.socialred-footer > h3 {
+.socialred-footer h3 {
   color: #ffffff;
+  font-family: var(--main-font-family);
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  text-align: left;
+  color: #ffffff;
+}
+
+.social-icon-container {
+  flex-direction: row;
+}
+
+.list-link {
+  list-style: none;
+  padding: 0%;
+  margin: 0%;
+  display: flex;
+  justify-content: center;
+}
+
+.item .link2 {
+  display: inline-block;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-right: 10px;
+}
+
+.item .footer-social-icon-instagram {
+  background-image: var(--footer-instagram);
+}
+.item .footer-social-icon-twitter {
+  background-image: var(--footer-twtter);
+}
+.item .footer-social-icon-facebook {
+  background-image: var(--footer-facebook);
+}
+.item .footer-social-icon-linkedin {
+  background-image: var(--footer-linkendin);
+}
+.link2:hover {
+  background-color: #2196f3;
+}
+
+.logo-customers {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #afb1b8;
+  width: 170px;
+  height: 92px;
+  border-radius: 4px;
+  overflow: hidden;
+  padding: 16px 32px;
+}
+/* Clientes paguina Estudio*/
+
+.set-customers {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-left: calc (-1 * 30px);
 }
 
 /*programacion de botones pagina portafolio*/
@@ -278,17 +368,35 @@ h2 {
   justify-content: center;
 }
 
-.contaner-button > button {
-  font-family: 'Roboto';
+.container-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.social-icon-container .link {
+  display: inline-block;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.container-button > button {
+  font-family: var(--main-font-family);
   font-style: normal;
-  font-weight: 500;
+  font-weight: bold;
   font-size: 16px;
-  line-height: 26px;
+  line-height: 1.6;
   text-align: center;
   background: #f5f4fa;
   margin-right: 8px;
   margin-top: 106px;
   border: none;
+  padding: 6px 22px;
 }
 
 .btn-filter:hover {
@@ -303,44 +411,60 @@ h2 {
 /* programacion de galeria portafolio */
 .gallery-container {
   display: flex;
+
+  justify-content: space-between;
   flex-wrap: wrap;
-  margin-top: 50px;
 }
 
-.gallery-item {
-  flex-basis: calc((100% - 20px) / 3);
-  justify-content: center;
-  text-align: center;
+.gallery-img {
+  position: relative;
+  overflow-y: hidden;
 }
 
-.gallery-container > h2 {
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 700;
+.p-descripton-royect {
+  box-sizing: border-box;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  padding: 63px 24px;
   font-size: 18px;
-  line-height: 36px;
-  letter-spacing: 0.06em;
-  color: #212121;
+  line-height: 1.56;
+  letter-spacing: 0.03em;
+  transform: translateY(100%);
+  transition: var(--galery-animation);
+  color: var(--secondary-color-txt);
+  background-color: rgba(33, 150, 243, 0.9);
 }
 
-.gallery-container > p {
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 400;
+/* animacion hover galeria portafolio */
+
+.gallery-link:hover .p-descripton-royect {
+  transform: translateY(0%);
+}
+.footer-gallery {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-right: 24px;
+  padding-left: 24px;
+  border-left: 1px solid #eeeeee;
+  border-right: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
+}
+
+.footer-gallery > h2 {
+  text-align: left;
+  margin-bottom: 4px;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+  color: var(--primary-color-txt);
+}
+.footer-gallery > p {
   font-size: 16px;
-  line-height: 30px;
+  line-height: 1.88;
   letter-spacing: 0.03em;
   color: #757575;
 }
-
-.img-gallery:hover {
-  cursor: pointer;
-  background: #ffffff;
-  border: 1px solid #eeeeee;
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
-    1px 4px 6px rgba(0, 0, 0, 0.16);
-}
-
 /* programacion pagina Estudio*/
 
 .message-pr-study {
@@ -354,7 +478,7 @@ h2 {
 }
 
 .message-pr-study > h1 {
-  font-family: 'Roboto';
+  font-family: var(--main-font-family);
   font-style: normal;
   font-weight: 900;
   font-size: 44px;
@@ -366,7 +490,7 @@ h2 {
 }
 
 .message-pr-study > button {
-  font-family: 'Roboto';
+  font-family: var(--main-font-family);
   font-style: normal;
   font-weight: 700;
   font-size: 16px;
@@ -387,21 +511,59 @@ h2 {
   padding-bottom: 25px;
 }
 
+/*redes sociales etiqueta equipo */
+
+.item .link3 {
+  display: inline-block;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-right: 10px;
+}
+.link3:hover {
+  color: #ffffff;
+  background-color: #2196f3;
+}
+.item .equipo-social-icon-instagram {
+  background-image: var(--equipo-instagram);
+}
+.item .equipo-social-icon-twittwer {
+  background-image: var(--equipo-twitter);
+}
+.item .equipo-social-icon-facebook {
+  background-image: var(--equipo-facebook);
+}
+.item .equipo-social-icon-linkendin {
+  background-image: var(--equipo-linkendin);
+}
 /* Clientes Regulares pagina Estudio*/
 
-.enterprice {
-  display: flex;
-  justify-content: center;
+.logo-enterprice {
   height: 372px;
 }
 
-.logo-enterprice > h2 {
-  margin-top: 59px;
-  margin-bottom: 44px;
+.item2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 170px;
+  height: 92px;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+  color: #afb1b8;
 }
 
-.logo-enterprice > img:hover {
-  border: 1px solid #2196f3;
-  border-radius: 4px;
+.list-link {
+  justify-content: space-between;
+}
+
+.item2:hover {
+  border-color: #2196f3;
+}
+
+.logo-customer:hover {
   fill: #2196f3;
 }
