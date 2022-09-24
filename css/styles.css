@@ -430,7 +430,7 @@ h2 {
   font-size: 18px;
   line-height: 1.56;
   letter-spacing: 0.03em;
-  transform: translateY(100%);
+  transform: translateY(110%);
   transition: var(--galery-animation);
   color: var(--secondary-color-txt);
   background-color: rgba(33, 150, 243, 0.9);
@@ -495,7 +495,7 @@ h2 {
   font-weight: 700;
   font-size: 16px;
   line-height: 30px;
-  color: #ffffff;
+  color: var(--secondary-color-txt);
   padding-top: 10px;
   padding-left: 32px;
   padding-right: 32px;
@@ -503,8 +503,61 @@ h2 {
   background: #2196f3;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
+  cursor: pointer;
 }
 
+/* ventana mondal pagina Estudio*/
+.backdrop {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2);
+  top: 0;
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.backdrop .modal {
+  width: 528px;
+  min-height: 581px;
+  top: 50%;
+  left: 50%;
+  background-color: #ffff;
+}
+
+.modal-boton {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.btn-close-modal {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-top: 8px;
+  margin-right: 8px;
+}
+
+.modal-close-icon {
+  position: fixed;
+  fill: #ffff;
+  width: 18px;
+  height: 18px;
+}
+
+/*-------------------*/
 .svg-studicrad {
   display: flex;
   justify-content: center;

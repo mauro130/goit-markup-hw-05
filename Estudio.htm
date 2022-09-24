@@ -29,7 +29,7 @@
         <section class="container">
             <div class="message-pr-study">
                 <h1>SOLUCIONES EFICACES PARA SU NEGOCIO</h1>
-                <button>Solicite nuestro servicio</button>
+                <button class="btn-service" data-modal-open>Solicite nuestro servicio</button>
             </div>
         </section>
         <section class="container">
@@ -329,7 +329,7 @@
                     </ul>
                 </div>
             </div>
-        </section>
+        </section>             
     </main>
 <footer>
     <section class="container">
@@ -367,5 +367,17 @@
         </div>
     </section>
 </footer>
+<div class="backdrop is-hidden" data-modal>
+    <div class="modal">
+        <section class="modal-boton">
+            <button class="btn-close-modal" data-modal-close>
+                <svg class="modal-close-icon">
+                    <use href="./images/svg/icons.svg#btn-close"></use>
+                </svg>
+            </button>
+        </section>
+    </div>
+</div>
+<script src="./js/modal.js"></script>
 </body>
 </html>
